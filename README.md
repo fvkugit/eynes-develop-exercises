@@ -5,7 +5,7 @@ Cree un repositorio de git y dentro de ese repositorio cree carpetas según el n
 mecanismo de testeo
 - En lo posible usar Python 3
 
-##Ejercicios
+## Ejercicios
 ### Nombre: Simple
 Hacer una función que genere una lista de diccionarios que contengan id y edad, donde
 edad sea un número aleatorio entre 1 y 100 y la longitud de la lista sea de 10
