@@ -14,3 +14,11 @@ def generateList(long):
         list.append(user)
     return list
 
+def sortList(list):
+    min, max = [0, 0]
+    sortedList = sorted(list, key=lambda x: x['edad'], reverse=True)
+    min = sortedList[-1]['id']
+    max = sortedList[0]['id']
+    print(f"Persona mas joven ID: {min}\nPersona mas vieja ID: {max}")
+    return sortedList
+
