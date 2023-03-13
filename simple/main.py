@@ -5,3 +5,12 @@
     Hacer otra función que reciba lo generado en la primer función y ordenarlo de mayor a
     menor. Printear el id de la persona más joven y más vieja. Devolver la lista ordenada.
 """
+import random
+
+def generateList(long):
+    list = []
+    for i in range(10):
+        user = {'id': i, 'edad': random.randint(1, 100)}
+        list.append(user)
+    return list
+
