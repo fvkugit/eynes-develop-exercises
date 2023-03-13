@@ -7,16 +7,16 @@
 """
 import random
 
-def generateList(long):
-    list = []
-    for i in range(10):
+def generateList(length):
+    generatedList = []
+    for i in range(length):
         user = {'id': i, 'edad': random.randint(1, 100)}
-        list.append(user)
-    return list
+        generatedList.append(user)
+    return generatedList
 
-def sortList(list):
+def sortList(unsortedList):
     min, max = [0, 0]
-    sortedList = sorted(list, key=lambda x: x['edad'], reverse=True)
+    sortedList = sorted(unsortedList, key=lambda x: x['edad'], reverse=True)
     min = sortedList[-1]['id']
     max = sortedList[0]['id']
     print(f"Persona mas joven ID: {min}\nPersona mas vieja ID: {max}")
