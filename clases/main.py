@@ -23,3 +23,6 @@ class Circulo:
     def getPerimetro(self):
         # Perimetro = 2 x pi x r
         return 2 * 3.14159 * self._rad
+    
+    def __repr__(self):
+        return f"¡Un circulo con un radio de {self._rad}!"
