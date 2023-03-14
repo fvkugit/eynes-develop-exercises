@@ -22,4 +22,4 @@ class Circulo:
     
     def getPerimetro(self):
         # Perimetro = 2 x pi x r
-        return 2 * 3.14159 * self._radio
+        return 2 * 3.14159 * self._rad
