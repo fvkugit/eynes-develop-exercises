@@ -9,3 +9,9 @@
     Permitir la multiplicación del circulo: Circulo * n debe devolver un nuevo objeto con el radio
     multiplicado por n. No permitir la multiplicación por números <= 0
 """
+
+class Circulo:
+    def __init__(self, rad):
+        if rad <= 0:
+            raise ValueError("El radio no puede ser menor o igual a cero.")
+        self._radio = rad
