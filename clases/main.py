@@ -9,8 +9,41 @@
     Permitir la multiplicación del circulo: Circulo * n debe devolver un nuevo objeto con el radio
     multiplicado por n. No permitir la multiplicación por números <= 0
 """
+import doctest
 
 class Circulo:
+    """ 
+        Circle representation class
+        Test:
+            >>> c = Circulo(5)
+            >>> c.radio
+            5
+            >>> c.getArea()
+            78.53975
+            >>> c.getPerimetro()
+            31.4159
+            >>> c.radio = 0
+            Traceback (most recent call last):
+                ...
+            ValueError: El radio no puede ser menor o igual a cero.
+            >>> c.radio = 7
+            >>> c.getArea()
+            153.93791
+            >>> c.getPerimetro()
+            43.98226
+            >>> c2 = c * 0
+            Traceback (most recent call last):
+                ...
+            ValueError: No se puede multiplicar el circulo por cero o menos
+            >>> c2 = c * 2
+            >>> c2.radio
+            14
+            >>> c2.getArea()
+            615.75164
+            >>> c2.getPerimetro()
+            87.96452
+    """
+
     def __init__(self, rad):
         """ 
             Initialize Circulo object with specified radius.
@@ -33,7 +66,7 @@ class Circulo:
                 float: Circle area.
         """
         # Area = pi x r^2
-        return 3.14159 * (self._rad ** 2)
+        return round(3.14159 * (self._rad ** 2), 5)
     
     def getPerimetro(self):
         """
@@ -43,7 +76,7 @@ class Circulo:
                 float: Circle perimeter.
         """
         # Perimetro = 2 x pi x r
-        return 2 * 3.14159 * self._rad
+        return round(2 * 3.14159 * self._rad, 5)
     
     def __repr__(self):
         """
@@ -94,3 +127,6 @@ class Circulo:
         if m <= 0:
             raise ValueError("No se puede multiplicar el circulo por cero o menos")
         return Circulo(self._rad * m)
+    
+if __name__ == "__main__":
+    doctest.testmod()
