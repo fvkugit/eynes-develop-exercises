@@ -38,6 +38,28 @@ def numbersTable(length):
     return table
 
 def findSequence(table):
+    """
+        Find a sequence of 4 consecutive numbers (horizontally or vertically) on a table
+        In case of find a sequence, print coords of numbers sequence.
+
+        Args:
+            table (list): List of rows
+        
+        Returns:
+            -
+
+        Example:
+            # Test find sequence on 5x5 table with seed 1 (no-sequence)
+            >>> random.seed(1) # Ensure consistent results
+            >>> table = numbersTable(5)
+            >>> findSequence(table)
+
+            # Test find sequence on 5x5 table with seed 8 (horizontal sequence on row 1)
+            >>> random.seed(8) # Ensure consistent results
+            >>> table = numbersTable(5)
+            >>> findSequence(table)
+            Secuencia horizontal desde [Fila 1, Columna 0] hasta [Fila 1, Columna 3].
+    """
     # Find 4 numbers horizontal sequence
     for row in table:
         for i in range(2):
