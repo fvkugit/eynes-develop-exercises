@@ -75,6 +75,12 @@ def findSequence(table):
                 print(f"Secuencia vertical desde [Fila {i}, Columna {j}] hasta [Fila {i+3}, Columna {j}].")
 
 def printTable(table):
+    """
+        Pretty print list of rows as table
+
+        Args:
+            table (list): List of rows
+    """
     for row in table:
         print(row)
 
