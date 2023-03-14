@@ -14,4 +14,12 @@ class Circulo:
     def __init__(self, rad):
         if rad <= 0:
             raise ValueError("El radio no puede ser menor o igual a cero.")
-        self._radio = rad
+        self._rad = rad
+
+    def getArea(self):
+        # Area = pi x r^2
+        return 3.14159 * (self._rad ** 2)
+    
+    def getPerimetro(self):
+        # Perimetro = 2 x pi x r
+        return 2 * 3.14159 * self._radio
