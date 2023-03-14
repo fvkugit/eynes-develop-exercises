@@ -85,4 +85,13 @@ def printTable(table):
         print(row)
 
 if __name__ == "__main__":
+    # Run doctests
     doctest.testmod()
+
+    # Test functions and printing each table
+    random.seed() # Clear seed
+    for n in range(1,4):
+        print(f"Test number {n}")
+        table = numbersTable(5)
+        printTable(table)
+        findSequence(table)
