@@ -35,3 +35,8 @@ class Circulo:
         if val <= 0:
             raise ValueError("El radio no puede ser menor o igual a cero.")
         self._rad = val
+
+    def __mul__(self, m):
+        if m <= 0:
+            raise ValueError("No se puede multiplicar el circulo por cero o menos")
+        return Circulo(self._rad * m)
