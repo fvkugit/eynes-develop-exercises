@@ -26,3 +26,12 @@ class Circulo:
     
     def __repr__(self):
         return f"¡Un circulo con un radio de {self._rad}!"
+    
+    @property
+    def radio(self):
+        return self._rad
+    @radio.setter
+    def radio(self, val):
+        if val <= 0:
+            raise ValueError("El radio no puede ser menor o igual a cero.")
+        self._rad = val
