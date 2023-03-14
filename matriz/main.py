@@ -25,3 +25,7 @@ def findSequence(table):
             if [table[i+k][j] for k in range(4)] == list(range(table[i][j], table[i][j]+4)):
                 # If find sequence, print sequence coords.
                 print(f"Secuencia vertical desde [Fila {i}, Columna {j}] hasta [Fila {i+3}, Columna {j}].")
+
+def printTable(table):
+    for row in table:
+        print(row)
