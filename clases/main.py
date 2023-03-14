@@ -94,12 +94,3 @@ class Circulo:
         if m <= 0:
             raise ValueError("No se puede multiplicar el circulo por cero o menos")
         return Circulo(self._rad * m)
-    
-circ = Circulo(5)
-print(circ)
-circ.radio = 3
-print(circ)
-
-circ2 = circ*10
-print(circ2)
-print(circ2.getPerimetro())
