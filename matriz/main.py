@@ -18,13 +18,20 @@ def numbersTable(length):
             table (list): List of rows 
         
         Example:
-            # Test generating a 5x5 table with random numbers
+            # Test generating a 5x5 table with random numbers (seed 1)
             >>> random.seed(1) # Ensure consistent results
             >>> numbersTable(5)
             [[2, 9, 1, 4, 1], [7, 7, 7, 6, 3], [1, 7, 0, 6, 6], [9, 0, 7, 4, 3], [9, 1, 5, 0, 0]]
+
+            # Test generating a 7x7 table with random numbers (seed 3)
             >>> random.seed(3) # Ensure consistent results
             >>> numbersTable(7)
             [[3, 9, 8, 2, 5, 9, 7], [9, 1, 9, 0, 7, 4, 8], [3, 3, 7, 8, 8, 7, 6], [2, 3, 2, 8, 6, 0, 1], [2, 9, 0, 4, 0, 4, 7], [9, 6, 6, 6, 9, 7, 2], [5, 1, 0, 2, 7, 3, 4]]
+            
+            # Test generating a 5x5 table with random numbers (seed 8)
+            >>> random.seed(8) # Ensure consistent results
+            >>> numbersTable(5)
+            [[3, 5, 6, 2, 3], [0, 1, 2, 3, 8], [3, 6, 0, 7, 7], [7, 6, 7, 9, 3], [6, 1, 7, 3, 0]]
     """
     # Create 5x5 table of random numbers between 0 and 9 
     table = [[random.randint(0, 9) for j in range(length)] for i in range(length)]
